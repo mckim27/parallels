@@ -22,6 +22,7 @@ def fibo_task(value):
   for item in range(value):
     a, b = b, a + b
   message = "The Fibonacci calculated with task id %s was %d" % (fibo_task.request.id, a)
+  print message
   return (value, message)
 
 @app.task
@@ -29,4 +30,5 @@ def crawl_task(url):
   request_data = requests.get(url)
   links = html_link_regex.findall(request_data.text)
   message = "The task %s found the following links %s.." % (url, links)
+  print message
   return message

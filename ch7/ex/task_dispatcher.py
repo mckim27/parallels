@@ -6,13 +6,7 @@ from tasks import *
 
 logging.basicConfig(level=logging.DEBUG)
 
-#logging.debug("디버깅용 로그~~")
-#logging.info("도움이 되는 정보를 남겨요~")
-#logging.warning("주의해야되는곳!")
-#logging.error("에러!!!")
-#logging.critical("심각한 에러!!")
-
-input_list = [4, 3, 8, 6, 10]
+input_list = [3, 4, 6, 8, 10, 12, 16, 20]
 url_list = ['http://www.google.com',
             'http://br.bing.com',
             'http://duckduckgo.com',
@@ -49,5 +43,5 @@ def manage_crawl_task(url_list):
 
 if __name__ == '__main__':
   #manage_sqrt_task(4)
-  #manage_fibo_task(input_list)
-  manage_crawl_task(url_list)
+  manage_fibo_task(input_list)
+  #manage_crawl_task(url_list)
